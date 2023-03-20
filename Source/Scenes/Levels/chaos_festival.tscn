@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://Scenes/LevelItems/item_checkpoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm.tres" type="TileSet" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Assets/Graphics/Backgrounds/ocean/ocean_02.jpeg" type="Texture" id=19]
 [ext_resource path="res://Assets/Graphics/Backgrounds/ocean/ocean_04.jpeg" type="Texture" id=20]
 [ext_resource path="res://Assets/Graphics/Backgrounds/ocean/ocean_01.jpeg" type="Texture" id=21]
+[ext_resource path="res://Scenes/Enemies/person.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Scenes/Enemies/person2.tscn" type="PackedScene" id=23]
 
 [sub_resource type="AnimatedTexture" id=1]
 flags = 4
@@ -360,6 +362,12 @@ position = Vector2( 7759.59, -57.2917 )
 curve = SubResource( 7 )
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="EggPawn5" parent="Enemies" instance=ExtResource( 23 )]
+position = Vector2( -463.646, -18.9743 )
+
+[node name="EggPawn4" parent="Enemies" instance=ExtResource( 22 )]
+position = Vector2( -417.948, -19.7235 )
 
 [node name="EggPawn3" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( -240.344, -18.1894 )
