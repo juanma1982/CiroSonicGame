@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=115 format=2]
+[gd_resource type="TileSet" load_steps=121 format=2]
 
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/1.png" type="Texture" id=2]
@@ -38,6 +38,7 @@
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/145.png" type="Texture" id=36]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/146.png" type="Texture" id=37]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/178.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Graphics/Tiles/emeralHill/Sonic2_MD_Map_EHZ_chunks.png" type="Texture" id=39]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/wall3.png" type="Texture" id=40]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/wall4.png" type="Texture" id=41]
 
@@ -222,45 +223,60 @@ polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=61]
-points = PoolVector2Array( -32, -32, 32, -21, 32, 0, -32, -14 )
+points = PoolVector2Array( 64, 128, 0, 128, 0, 0, 64, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=62]
-points = PoolVector2Array( 32, 32, -32, 32, -16, 30 )
+[sub_resource type="OccluderPolygon2D" id=62]
+polygon = PoolVector2Array( 64, 128, 0, 128, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=77]
+points = PoolVector2Array( 0, 32, 0, 32, 128, 32, 256, 0, 448, 0, 448, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=78]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 32, 128, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=63]
-points = PoolVector2Array( 32, 32, -16, 30, 0, 27 )
+points = PoolVector2Array( -32, -32, 32, -21, 32, 0, -32, -14 )
+
+[sub_resource type="ConvexPolygonShape2D" id=79]
+points = PoolVector2Array( 0, 64, 0, 64, 64, 64, 192, 96, 320, 96, 448, 64, 484.035, 58.287, 516.442, 39.1898, 539.012, 3.88889, 640, 2.73148, 640, 128, 0, 128 )
 
 [sub_resource type="ConvexPolygonShape2D" id=64]
-points = PoolVector2Array( 32, 32, 0, 27, 16, 23 )
+points = PoolVector2Array( 32, 32, -32, 32, -16, 30 )
 
 [sub_resource type="ConvexPolygonShape2D" id=65]
-points = PoolVector2Array( 32, 16, 32, 32, 16, 23 )
+points = PoolVector2Array( 32, 32, -16, 30, 0, 27 )
 
 [sub_resource type="ConvexPolygonShape2D" id=66]
-points = PoolVector2Array( 16, -19, 32, -32, 32, 32, -32, 32, 0, -4 )
+points = PoolVector2Array( 32, 32, 0, 27, 16, 23 )
 
 [sub_resource type="ConvexPolygonShape2D" id=67]
-points = PoolVector2Array( -32, 32, -32, 16, -16, 8 )
+points = PoolVector2Array( 32, 16, 32, 32, 16, 23 )
 
 [sub_resource type="ConvexPolygonShape2D" id=68]
-points = PoolVector2Array( 16, -19, 26, -32, 32, -32 )
+points = PoolVector2Array( 16, -19, 32, -32, 32, 32, -32, 32, 0, -4 )
 
 [sub_resource type="ConvexPolygonShape2D" id=69]
-points = PoolVector2Array( 0, -4, -32, 32, -16, 8 )
+points = PoolVector2Array( -32, 32, -32, 16, -16, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=70]
-points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, 23, -28, 16 )
+points = PoolVector2Array( 16, -19, 26, -32, 32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=71]
-points = PoolVector2Array( 32, -32, -28, 16, -20, 0 )
+points = PoolVector2Array( 0, -4, -32, 32, -16, 8 )
 
 [sub_resource type="ConvexPolygonShape2D" id=72]
-points = PoolVector2Array( 32, -32, -20, 0, -15, -16 )
+points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, 23, -28, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=73]
-points = PoolVector2Array( 32, -32, -15, -16, -12, -32 )
+points = PoolVector2Array( 32, -32, -28, 16, -20, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=74]
+points = PoolVector2Array( 32, -32, -20, 0, -15, -16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=75]
+points = PoolVector2Array( 32, -32, -15, -16, -12, -32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=76]
 points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 
 [resource]
@@ -402,14 +418,14 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 5/navigation_offset = Vector2( 32, 32 )
 5/shape_offset = Vector2( 32, 32 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-5/shape = SubResource( 61 )
+5/shape = SubResource( 63 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 61 ),
+"shape": SubResource( 63 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 5/z_index = 0
@@ -423,22 +439,10 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 6/navigation_offset = Vector2( 32, 32 )
 6/shape_offset = Vector2( 32, 32 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-6/shape = SubResource( 62 )
+6/shape = SubResource( 64 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 62 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 63 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
@@ -449,6 +453,18 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 65 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 66 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 67 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 6/z_index = 0
@@ -462,22 +478,10 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 7/navigation_offset = Vector2( 32, 32 )
 7/shape_offset = Vector2( 32, 32 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-7/shape = SubResource( 66 )
+7/shape = SubResource( 68 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 66 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 67 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
@@ -488,6 +492,18 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 69 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 70 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 71 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 7/z_index = 0
@@ -501,22 +517,10 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 8/navigation_offset = Vector2( 32, 32 )
 8/shape_offset = Vector2( 32, 32 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-8/shape = SubResource( 70 )
+8/shape = SubResource( 72 )
 8/shape_one_way = false
 8/shape_one_way_margin = 1.0
 8/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 70 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 71 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
-}, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
@@ -527,6 +531,18 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 "one_way": false,
 "one_way_margin": 1.0,
 "shape": SubResource( 73 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 74 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 75 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 8/z_index = 0
@@ -540,14 +556,14 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 9/navigation_offset = Vector2( 32, 32 )
 9/shape_offset = Vector2( 32, 32 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 32, 32 )
-9/shape = SubResource( 74 )
+9/shape = SubResource( 76 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 74 ),
+"shape": SubResource( 76 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 32, 32 )
 } ]
 9/z_index = 0
@@ -1338,3 +1354,153 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 42/z_index = 0
+43/name = "Sonic2_MD_Map_EHZ_chunks.png 43"
+43/texture = ExtResource( 39 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 53, 19, 18, 22 )
+43/tile_mode = 1
+43/autotile/bitmask_mode = 0
+43/autotile/bitmask_flags = [  ]
+43/autotile/icon_coordinate = Vector2( 0, 0 )
+43/autotile/tile_size = Vector2( 32, 32 )
+43/autotile/spacing = 0
+43/autotile/occluder_map = [  ]
+43/autotile/navpoly_map = [  ]
+43/autotile/priority_map = [  ]
+43/autotile/z_index_map = [  ]
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "Sonic2_MD_Map_EHZ_chunks.png 44"
+44/texture = ExtResource( 39 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 167, 93, 57, 17 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
+45/name = "Sonic2_MD_Map_EHZ_chunks.png 45"
+45/texture = ExtResource( 39 )
+45/tex_offset = Vector2( 0, 0 )
+45/modulate = Color( 1, 1, 1, 1 )
+45/region = Rect2( 128, 0, 64, 128 )
+45/tile_mode = 0
+45/occluder_offset = Vector2( 0, 0 )
+45/navigation_offset = Vector2( 0, 0 )
+45/shape_offset = Vector2( 0, 0 )
+45/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+45/shape = SubResource( 61 )
+45/shape_one_way = false
+45/shape_one_way_margin = 1.0
+45/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 61 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+45/z_index = 0
+46/name = "Sonic2_MD_Map_EHZ_chunks.png 46"
+46/texture = ExtResource( 39 )
+46/tex_offset = Vector2( 0, 0 )
+46/modulate = Color( 1, 1, 1, 1 )
+46/region = Rect2( 192, 0, 64, 128 )
+46/tile_mode = 0
+46/occluder_offset = Vector2( 0, 0 )
+46/navigation_offset = Vector2( 0, 0 )
+46/shape_offset = Vector2( 0, 0 )
+46/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+46/shape_one_way = false
+46/shape_one_way_margin = 0.0
+46/shapes = [  ]
+46/z_index = 0
+47/name = "Sonic2_MD_Map_EHZ_chunks.png 47"
+47/texture = ExtResource( 39 )
+47/tex_offset = Vector2( 0, 0 )
+47/modulate = Color( 1, 1, 1, 1 )
+47/region = Rect2( 192, 0, 64, 128 )
+47/tile_mode = 0
+47/occluder_offset = Vector2( 0, 0 )
+47/occluder = SubResource( 62 )
+47/navigation_offset = Vector2( 0, 0 )
+47/shape_offset = Vector2( 0, 0 )
+47/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+47/shape_one_way = false
+47/shape_one_way_margin = 0.0
+47/shapes = [  ]
+47/z_index = 0
+48/name = "Sonic2_MD_Map_EHZ_chunks.png 48"
+48/texture = ExtResource( 39 )
+48/tex_offset = Vector2( 0, 0 )
+48/modulate = Color( 1, 1, 1, 1 )
+48/region = Rect2( 256, 0, 448, 128 )
+48/tile_mode = 0
+48/occluder_offset = Vector2( 0, 0 )
+48/navigation_offset = Vector2( 0, 0 )
+48/shape_offset = Vector2( 0, 0 )
+48/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+48/shape = SubResource( 77 )
+48/shape_one_way = false
+48/shape_one_way_margin = 1.0
+48/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 77 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+48/z_index = 0
+49/name = "Sonic2_MD_Map_EHZ_chunks.png 49"
+49/texture = ExtResource( 39 )
+49/tex_offset = Vector2( 0, 0 )
+49/modulate = Color( 1, 1, 1, 1 )
+49/region = Rect2( 704, 0, 128, 128 )
+49/tile_mode = 0
+49/occluder_offset = Vector2( 0, 0 )
+49/navigation_offset = Vector2( 0, 0 )
+49/shape_offset = Vector2( 0, 0 )
+49/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+49/shape = SubResource( 78 )
+49/shape_one_way = false
+49/shape_one_way_margin = 1.0
+49/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 78 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+49/z_index = 0
+50/name = "Sonic2_MD_Map_EHZ_chunks.png 50"
+50/texture = ExtResource( 39 )
+50/tex_offset = Vector2( 0, 0 )
+50/modulate = Color( 1, 1, 1, 1 )
+50/region = Rect2( 832, 0, 640, 128 )
+50/tile_mode = 0
+50/occluder_offset = Vector2( 0, 0 )
+50/navigation_offset = Vector2( 0, 0 )
+50/shape_offset = Vector2( 0, 0 )
+50/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+50/shape = SubResource( 79 )
+50/shape_one_way = false
+50/shape_one_way_margin = 1.0
+50/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 79 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+50/z_index = 0
