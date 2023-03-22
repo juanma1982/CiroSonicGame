@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MeepMeep_old.ogg-4888a5bd02c27d5f5ddc80e23aff6ae6.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/MeepMeep_old.ogg"
+dest_files=[ "res://.import/MeepMeep_old.ogg-4888a5bd02c27d5f5ddc80e23aff6ae6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
