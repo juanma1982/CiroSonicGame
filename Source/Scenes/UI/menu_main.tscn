@@ -1,7 +1,48 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UI/menu_main.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/ambitsek.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+outline_color = Color( 0.0234375, 0.0183783, 0.00128174, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 23
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+font_data = ExtResource( 3 )
 
 [node name="menu_main" type="VBoxContainer"]
 margin_left = 128.0
@@ -19,25 +60,40 @@ __meta__ = {
 }
 
 [node name="btnNewGame" type="Button" parent="."]
-margin_top = 84.0
+margin_top = 70.0
 margin_right = 768.0
-margin_bottom = 112.0
+margin_bottom = 103.0
 hint_tooltip = "Start a new game!"
-text = "NEW GAME"
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0235294, 0.0196078, 0, 1 )
+text = "Juego Nuevo"
 
 [node name="btnOptions" type="Button" parent="."]
-margin_top = 124.0
+margin_top = 115.0
 margin_right = 768.0
-margin_bottom = 152.0
+margin_bottom = 147.0
 hint_tooltip = "Choose options such as screen size, volume etc."
-text = "OPTIONS"
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.0235294, 0.0196078, 0, 1 )
+text = "Configuración"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btnQuit" type="Button" parent="."]
-margin_top = 164.0
+margin_top = 159.0
 margin_right = 768.0
 margin_bottom = 192.0
 hint_tooltip = "Leave the game!"
-text = "QUIT"
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.0235294, 0.0196078, 0, 1 )
+text = "Salir"
