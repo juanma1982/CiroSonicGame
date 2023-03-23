@@ -1,8 +1,31 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=1]
 [ext_resource path="res://Scripts/UI/menu_options.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Fonts/IBMPlexMono-Regular-16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/Fonts/ambitsek.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 1, 1, 0.231373 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+font_data = ExtResource( 4 )
 
 [node name="menu_options" type="VBoxContainer"]
 pause_mode = 2
@@ -20,18 +43,21 @@ __meta__ = {
 }
 
 [node name="header_text" type="Label" parent="."]
-margin_top = 175.0
+margin_top = 155.0
 margin_right = 900.0
-margin_bottom = 197.0
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "OPTIONS"
+text = "Opciones"
 align = 1
 valign = 1
 
 [node name="options_tabholder" type="TabContainer" parent="."]
-margin_top = 209.0
+margin_top = 189.0
 margin_right = 900.0
-margin_bottom = 361.0
+margin_bottom = 341.0
+custom_styles/tab_bg = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 tab_align = 0
 
 [node name="Options" type="VBoxContainer" parent="options_tabholder"]
@@ -46,7 +72,8 @@ margin_bottom = -4.0
 margin_right = 892.0
 margin_bottom = 30.0
 hint_tooltip = "Toggle between using the full screen or not"
-text = "FULL SCREEN"
+custom_fonts/font = SubResource( 4 )
+text = "pantalla completa"
 
 [node name="volume_master" type="HSplitContainer" parent="options_tabholder/Options"]
 margin_top = 34.0
@@ -109,7 +136,23 @@ max_value = 1.0
 step = 0.05
 
 [node name="btn_goback" type="Button" parent="."]
-margin_top = 373.0
+margin_top = 353.0
 margin_right = 900.0
-margin_bottom = 401.0
-text = "BACK"
+margin_bottom = 381.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Volver"
+
+[node name="QuitBtn" type="Button" parent="."]
+margin_top = 393.0
+margin_right = 900.0
+margin_bottom = 421.0
+custom_styles/hover = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Salir"

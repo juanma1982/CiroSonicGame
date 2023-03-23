@@ -13,6 +13,7 @@ extends VBoxContainer
 # Sets up the signals, makes sure the volume settings are correct and sets focus.
 func _ready () -> void:
 	helper_functions._whocares = $"btn_goback".connect ("pressed", self, "btn_mainmenu_on_press")
+	helper_functions._whocares = $"QuitBtn".connect ("pressed", self, "btnQuit_on_press")
 	helper_functions._whocares = $"options_tabholder/Options/btn_fullscreencheck".connect (
 		"pressed",
 		self,
@@ -50,6 +51,10 @@ func _ready () -> void:
 		get_tree ().paused = true	# Pause the rest of the game while the options screen is visible.
 	return
 
+func btnQuit_on_press () -> void:
+	get_tree ().quit ()
+	return
+	
 # Returning to the previous. It saves any necessary changes.
 func btn_mainmenu_on_press () -> void:
 	if (has_node ("../menu_main")):	# If called from the main menu, make it visible again and give it focus.
