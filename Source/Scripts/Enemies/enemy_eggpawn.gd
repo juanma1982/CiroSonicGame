@@ -14,7 +14,7 @@ func _process (_delta) -> void:
 		# Applies velocity, rotates, and then applies gravity
 		position += explode_velocity
 		rotation += 0.1
-		explode_velocity.y += 0.2
+		explode_velocity.y += 0.5
 		if (explode_velocity.y > 10):	# After a certain point, free them.
 			queue_free ()
 	return

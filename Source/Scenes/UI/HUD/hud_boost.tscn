@@ -5,6 +5,7 @@
 [ext_resource path="res://Assets/Graphics/UI/HUD/hud_boost_bar_over.png" type="Texture" id=3]
 
 [node name="hud_boost" type="TextureProgress"]
+visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 max_value = 60.0

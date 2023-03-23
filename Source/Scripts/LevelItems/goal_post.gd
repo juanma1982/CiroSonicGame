@@ -19,6 +19,7 @@ func hit_goalpost (body) -> void:
 	if (body is game_space.player_class and not goaled):	# Player has passed the goalpost.
 		goaled = true
 		$"AnimationPlayer".play ("goal")
+		$"cartelAnimado".play("girar")
 		sound_player.play_sound ("goalpost")
 		if (OS.is_debug_build ()):
 			printerr ("Goal post passed!")

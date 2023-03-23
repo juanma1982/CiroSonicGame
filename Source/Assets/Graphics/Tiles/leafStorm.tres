@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=138 format=2]
+[gd_resource type="TileSet" load_steps=140 format=2]
 
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/1.png" type="Texture" id=2]
@@ -43,6 +43,8 @@
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/wall4.png" type="Texture" id=41]
 [ext_resource path="res://Assets/Graphics/Tiles/emeralHill/loopIz.png" type="Texture" id=42]
 [ext_resource path="res://Assets/Graphics/Tiles/emeralHill/Loop.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Graphics/Tiles/emeralHill/palmeras.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Graphics/Tiles/emeralHill/pinches.png" type="Texture" id=45]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -1854,3 +1856,31 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 65/shape_one_way_margin = 0.0
 65/shapes = [  ]
 65/z_index = 0
+66/name = "palmeras.png 66"
+66/texture = ExtResource( 44 )
+66/tex_offset = Vector2( 0, 0 )
+66/modulate = Color( 1, 1, 1, 1 )
+66/region = Rect2( 0, 0, 128, 160 )
+66/tile_mode = 0
+66/occluder_offset = Vector2( 0, 0 )
+66/navigation_offset = Vector2( 0, 0 )
+66/shape_offset = Vector2( 0, 0 )
+66/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+66/shape_one_way = false
+66/shape_one_way_margin = 0.0
+66/shapes = [  ]
+66/z_index = 0
+67/name = "pinches.png 67"
+67/texture = ExtResource( 45 )
+67/tex_offset = Vector2( 0, 0 )
+67/modulate = Color( 1, 1, 1, 1 )
+67/region = Rect2( 0, 0, 64, 64 )
+67/tile_mode = 0
+67/occluder_offset = Vector2( 0, 0 )
+67/navigation_offset = Vector2( 0, 0 )
+67/shape_offset = Vector2( 0, 0 )
+67/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+67/shape_one_way = false
+67/shape_one_way_margin = 0.0
+67/shapes = [  ]
+67/z_index = 0
