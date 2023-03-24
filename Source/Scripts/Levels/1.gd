@@ -3,6 +3,8 @@
 
 extends "res://Scripts/Levels/level_generic.gd"
 
+export(PackedScene) var boostParticle
+
 func _ready () -> void:
 	if (not has_node ("/root/Level/Player")):	# No player? Add them to the scene.
 		helper_functions.add_path_to_node ("res://Scenes/Player/player_sonic.tscn", "/root/Level")
