@@ -4,7 +4,11 @@
 extends "res://Scripts/Enemies/enemy_generic.gd"
 
 var enableHit = true
+var xSpeed = 0.4
+var movement_direction = -1
 
+func resetHits() -> void:
+	hits_left = 8
 
 func _ready () -> void:
 	# The function that this refers to should be created in the actual scripts for enemies.
@@ -16,7 +20,10 @@ func _ready () -> void:
 func _process (_delta) -> void:
 	if (hits_left > 0):	# So long as the enemy has hits left...
 		# ...do a stupid simple AI routine. Simply move by x pixels per frame
-		position.x -= abs (random_helpers.RNG.randf_range (0.1, 0.5))
+		position.x += xSpeed*movement_direction #abs (random_helpers.RNG.randf_range (0.1, 0.5))
+		if(position.x > 1300 or position.x < -120):
+			movement_direction = movement_direction*-1
+			$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
 	else:
 		# This enemy is no more.
 		# calculations for the explosion animation. 
@@ -44,20 +51,24 @@ func _on_enemy_area_entered (area) -> void:
 			hits_left = hits_left - 1
 			$AnimatedSprite.play("hit")
 			$CollisionShape2D.disabled = true
-			enableHit = false				
+			enableHit = false
+			$explosion.visible = true;
+			$explosion2.visible = true;
+			xSpeed += 0.2
+			movement_direction = movement_direction*-1			
+			$AnimatedSprite.flip_h = not $AnimatedSprite.flip_h
 			$Timer.start()
 			if (hits_left > 0):	# More than one hit remaining means the enemy survives for now.
 				return
 
 		# This enemy is dead...
 		game_space.score += points_value
-		#var newNode = boostParticle.instance ()
-		#newNode.position = position
-		#newNode.boostValue = 2
-		#get_node ("/root/Level").add_child (newNode)
+		var newNode = boostParticle.instance ()
+		newNode.position = position
+		newNode.boostValue = 2
+		get_node ("/root/Level").add_child (newNode)
 
-		$explosion.visible = true;
-		$explosion2.visible = true;
+		
 
 		# Set the velocity to match the player's speed, with a few constraints.
 		explode_velocity = area.get ("player_velocity") * 1.5
@@ -70,7 +81,7 @@ func _on_enemy_area_entered (area) -> void:
 
 
 func _on_Timer_timeout():
-	$AnizzmatedSprite.play("default")
+	$AnimatedSprite.play("default")
 	get_node("CollisionShape2D").disabled = false  # Replace with function body.
 	enableHit = true
 	$explosion.visible = false;

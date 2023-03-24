@@ -101,6 +101,7 @@ __meta__ = {
 [node name="PlayerSprites" parent="." instance=ExtResource( 1 )]
 position = Vector2( -2.00225, -1.50169 )
 animation = "Spindash"
+frame = 3
 
 [node name="LeftCast" type="RayCast2D" parent="."]
 position = Vector2( -6, -10 )
@@ -143,6 +144,7 @@ joint_mode = 2
 
 [node name="BoostSprite" parent="." instance=ExtResource( 2 )]
 visible = false
+frame = 3
 
 [node name="sound_boost" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )

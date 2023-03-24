@@ -13,6 +13,7 @@ onready var last_checkpoint = null						# What is the last checkpoint.
 
 onready var player_class = preload ("res://Scripts/Player/player_generic.gd")	# Convenience for checking player stuff.
 onready var enemy_class = preload ("res://Scripts/Enemies/enemy_generic.gd")	# Convenience for checking enemies.
+
 # Used for when the actual physical node of the player, rather than the player class, is required.
 var player_node = null	# Set up by player_generic.gd - trying to use this before then will result in bad things happening!
 

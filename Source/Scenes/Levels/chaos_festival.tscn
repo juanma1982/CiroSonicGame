@@ -398,28 +398,22 @@ position = Vector2( -840, -73.3496 )
 
 [node name="RingSpawner2" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( -1409.59, -19.7606 )
-rotationalOffset = 0
 
 [node name="RingSpawner3" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( -893.295, -20.7044 )
-rotationalOffset = 0
 
 [node name="RingSpawner8" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 383.263, -16.2095 )
-rotationalOffset = 0
 
 [node name="RingSpawner9" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 747.351, -17.7078 )
-rotationalOffset = 0
 
 [node name="RingSpawner10" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 1142.9, -210.99 )
-rotationalOffset = 0
 
 [node name="RingSpawner11" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 1475.53, -113.6 )
 offset = Vector2( 30, 13.981 )
-rotationalOffset = 0
 
 [node name="RingSpawner12" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 2095.34, -27.6696 )
@@ -429,7 +423,6 @@ rotationalOffset = -0.698
 
 [node name="RingSpawner4" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( -49.4713, -70.7298 )
-rotationalOffset = 0
 
 [node name="RingSpawner5" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 117.431, -73.3496 )
@@ -438,21 +431,17 @@ rotationalOffset = -0.197
 [node name="RingSpawner6" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 329.018, -207.245 )
 offset = Vector2( 19.779, -18.043 )
-rotationalOffset = 0
 
 [node name="RingSpawner7" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 1069.02, -79.2246 )
 count = 3
 offset = Vector2( 0, -30 )
-rotationalOffset = 0
 
 [node name="RingSpawner" parent="Rings" instance=ExtResource( 14 )]
-rotationalOffset = 0
 
 [node name="RingSpawner13" parent="Rings" instance=ExtResource( 14 )]
 position = Vector2( 1080.07, -407.781 )
 count = 8
-rotationalOffset = 0
 
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
