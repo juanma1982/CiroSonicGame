@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=140 format=2]
+[gd_resource type="TileSet" load_steps=145 format=2]
 
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/0.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm/1.png" type="Texture" id=2]
@@ -45,6 +45,8 @@
 [ext_resource path="res://Assets/Graphics/Tiles/emeralHill/Loop.png" type="Texture" id=43]
 [ext_resource path="res://Assets/Graphics/Tiles/emeralHill/palmeras.png" type="Texture" id=44]
 [ext_resource path="res://Assets/Graphics/Tiles/emeralHill/pinches.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Graphics/Tiles/emeralHill/rampa01.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Graphics/Tiles/emeralHill/colina.png" type="Texture" id=47]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -269,7 +271,7 @@ points = PoolVector2Array( 0, 64, 33.2012, 54.2743, 58.0854, 47.3298, 128, 32, 1
 points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=75]
-points = PoolVector2Array( 0, 64, 32, 64, 80.5972, 40.2256, 111.269, -1.44101, 128, 0, 128, 192, 0, 192 )
+points = PoolVector2Array( 0, 64, 32, 64, 91.2224, 29.375, 106.5, 0.208344, 128, 0, 128, 192, 0, 192 )
 
 [sub_resource type="ConvexPolygonShape2D" id=76]
 points = PoolVector2Array( 128, 64, 0, 64, 0, 0, 128, 0 )
@@ -301,6 +303,12 @@ points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
 [sub_resource type="ConvexPolygonShape2D" id=85]
 points = PoolVector2Array( 32, -32, -96, -32, -96, -128, 32, -128 )
 
+[sub_resource type="ConvexPolygonShape2D" id=95]
+points = PoolVector2Array( 0, 64, 0, 64, 128, 32, 192, 32, 192, 0, 256, 0, 256, 32, 384, 64, 384, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=96]
+points = PoolVector2Array( -96, -96, -96, -96, -51.6018, -98.0046, -10.5139, -125.782, 12.0555, -160.505, 32, -160, 32, 32, -96, 32 )
+
 [sub_resource type="ConvexPolygonShape2D" id=86]
 points = PoolVector2Array( 16, -19, 32, -32, 32, 32, -32, 32, 0, -4 )
 
@@ -312,6 +320,9 @@ points = PoolVector2Array( 16, -19, 26, -32, 32, -32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=89]
 points = PoolVector2Array( 0, -4, -32, 32, -16, 8 )
+
+[sub_resource type="ConvexPolygonShape2D" id=97]
+points = PoolVector2Array( 0, 128, 0, 128, 46.1342, 125.417, 88.3796, 96.4815, 106.898, 64.0741, 128, 64, 128, 256, 0, 256 )
 
 [sub_resource type="ConvexPolygonShape2D" id=90]
 points = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, 23, -28, 16 )
@@ -1884,3 +1895,66 @@ points = PoolVector2Array( 32, 32, 26, 32, 32, 23 )
 67/shape_one_way_margin = 0.0
 67/shapes = [  ]
 67/z_index = 0
+68/name = "colina.png 68"
+68/texture = ExtResource( 47 )
+68/tex_offset = Vector2( 0, 0 )
+68/modulate = Color( 1, 1, 1, 1 )
+68/region = Rect2( 0, 0, 384, 128 )
+68/tile_mode = 0
+68/occluder_offset = Vector2( 0, 0 )
+68/navigation_offset = Vector2( 0, 0 )
+68/shape_offset = Vector2( 0, 0 )
+68/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+68/shape = SubResource( 95 )
+68/shape_one_way = false
+68/shape_one_way_margin = 1.0
+68/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 95 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+68/z_index = 0
+69/name = "rampa01.png 69"
+69/texture = ExtResource( 46 )
+69/tex_offset = Vector2( 0, 0 )
+69/modulate = Color( 1, 1, 1, 1 )
+69/region = Rect2( 96, 224, 32, 32 )
+69/tile_mode = 0
+69/occluder_offset = Vector2( 0, 0 )
+69/navigation_offset = Vector2( 0, 0 )
+69/shape_offset = Vector2( 0, 0 )
+69/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+69/shape = SubResource( 96 )
+69/shape_one_way = false
+69/shape_one_way_margin = 1.0
+69/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 96 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+69/z_index = 0
+70/name = "rampa01.png 70"
+70/texture = ExtResource( 46 )
+70/tex_offset = Vector2( 0, 0 )
+70/modulate = Color( 1, 1, 1, 1 )
+70/region = Rect2( 0, 0, 128, 256 )
+70/tile_mode = 0
+70/occluder_offset = Vector2( 0, 0 )
+70/navigation_offset = Vector2( 0, 0 )
+70/shape_offset = Vector2( 0, 0 )
+70/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+70/shape = SubResource( 97 )
+70/shape_one_way = false
+70/shape_one_way_margin = 1.0
+70/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 97 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+70/z_index = 0

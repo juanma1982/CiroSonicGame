@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/UI/next_level.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/ambitsek.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="nextLevel" type="VBoxContainer"]
+pause_mode = 2
+margin_left = 64.0
+margin_right = 964.0
+margin_bottom = 576.0
+focus_mode = 2
+theme = ExtResource( 1 )
+custom_constants/separation = 12
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Options menu for the game/app."
+}
+
+[node name="header_text" type="Label" parent="."]
+margin_top = 213.0
+margin_right = 900.0
+margin_bottom = 255.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 3
+text = "Nivel Completado"
+align = 1
+valign = 1
+
+[node name="btn_goback" type="Button" parent="."]
+margin_top = 267.0
+margin_right = 900.0
+margin_bottom = 309.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Siguiente Nivel"
+
+[node name="QuitBtn" type="Button" parent="."]
+margin_top = 321.0
+margin_right = 900.0
+margin_bottom = 363.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+text = "Salir"
+[connection signal="pressed" from="btn_goback" to="." method="_on_btn_goback_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_QuitBtn_pressed"]

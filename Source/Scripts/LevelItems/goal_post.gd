@@ -31,4 +31,5 @@ func goalpost_raised (_xxx) -> void:
 	printerr ("TODO: End of level stuff here!")
 	game_space.player_node.is_unmoveable = true
 	jingle_player.play_jingle ("res://Assets/Audio/Jingles/Mission_Complete.ogg", false)
+	helper_functions.add_path_to_node ("res://Scenes/UI/nextLevel.tscn", "/root/Level/game_hud")
 	return

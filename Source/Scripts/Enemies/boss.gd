@@ -10,12 +10,6 @@ var movement_direction = -1
 func resetHits() -> void:
 	hits_left = 8
 
-func _ready () -> void:
-	# The function that this refers to should be created in the actual scripts for enemies.
-	hits_left = 8
-	
-	return
-
 # The basic pawn is updated every frame.
 func _process (_delta) -> void:
 	if (hits_left > 0):	# So long as the enemy has hits left...
@@ -41,7 +35,7 @@ func _on_enemy_area_entered (area) -> void:
 	if(!enableHit):
 		 return
 	if (area is game_space.player_class and hits_left > 0):	# The player is hitting the egg pawn...
-		# If the player isn't attacking, hurt the player.
+		# If the player isn't attacking, hurt the player.				
 		if (not area.is_player_attacking ()):
 			area.hurt_player ()
 			return
@@ -88,3 +82,7 @@ func _on_Timer_timeout():
 	$explosion2.visible = false;
 	$Timer.stop()
 	
+
+
+func _on_boss2_input_event(viewport, event, shape_idx):
+	pass

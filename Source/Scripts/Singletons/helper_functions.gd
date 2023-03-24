@@ -8,6 +8,7 @@ extends Node
 onready var root := get_tree ().get_root ()	# What the root of the scene tree is.
 
 var _whocares = null	# Used for functions which return a value which we don't need to be concerned with.
+var currentLevel = 0
 
 # Used for the master audio bus.
 onready var master_bus_index := AudioServer.get_bus_index ("Master")
@@ -59,6 +60,12 @@ func add_path_to_node (scene_path = "", node_to_add_to = "/root"):
 	# Then add it to the specified node.
 	call_deferred ("add_child_to_node", scene_to_go_to, node_to_add_to)
 	return (scene_to_go_to)										# Return the instance created.
+
+func getCurrentLevel() -> int:
+	return currentLevel
+
+func setCurrentLevel(level) -> void:
+	currentLevel = level
 
 ## change_scene
 # helper_functions.change_scene (path)

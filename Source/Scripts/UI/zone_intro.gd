@@ -3,6 +3,7 @@
 # Needs to be run after the HUD is added to the level scene.
 
 extends Node2D
+export(int) var number = 1
 
 func _ready() -> void:
 	if (not get_node ("..").level_logo == ""):	# Does the level have a logo? If so, use it.

@@ -12,7 +12,9 @@
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 4 )
-music_file = "res://Assets/Audio/Music/JehJehRocket.ogg"
+music_file = "res://Assets/Audio/Music/finalBoss.ogg"
+level_logo = "res://Assets/Graphics/UI/Zones/zoneLogo03.png"
+boostParticle = ExtResource( 7 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 50 )
@@ -58,7 +60,6 @@ scale = Vector2( 0.5, 0.5 )
 
 [node name="boss2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 904, -32 )
-boostParticle = ExtResource( 7 )
 
 [node name="Rings" type="Node2D" parent="."]
 
