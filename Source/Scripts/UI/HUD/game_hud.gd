@@ -15,3 +15,52 @@ func _ready() -> void:
 func on_boost_hud_value_changed (changed_to: float) -> void:
 	$"hud_boost".value = (60.0 if game_space.infinite_boost_cheat else changed_to)
 	return
+
+
+func _on_back_pressed():	
+	#Input.action_press("move_left")
+	pass
+
+func _on_foward_pressed():	
+	#Input.action_press("move_right")
+	pass
+
+func _on_back_button_down():
+	Input.action_press("move_left")
+
+func _on_foward_button_down():
+	Input.action_press("move_right")
+	
+func _on_foward_button_up():
+	Input.action_release("move_right")
+
+func _on_back_button_up():
+	Input.action_release("move_left")
+	
+func _on_back_toggled():
+	pass
+
+
+func _on_Jump_button_down():
+	Input.action_press("jump")
+
+
+func _on_Jump_button_up():
+	Input.action_release("jump")
+
+
+func _on_Jump_pressed():
+	pass # Replace with function body.
+
+
+func _on_Jump2_button_down():
+	Input.action_press("spin_dash")	
+
+
+func _on_Jump2_button_up():
+	Input.action_release("spin_dash")
+	
+
+
+func _on_salir_button_down():
+	Input.action_release("ui_cancel")

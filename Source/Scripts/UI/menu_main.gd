@@ -16,9 +16,9 @@ func _ready () -> void:
 ## btnNewGame_on_press
 # Starts a new game!
 func btnNewGame_on_press () -> void:
-	#if (not helper_functions.change_scene ("res://Scenes/Levels/chaos_festival.tscn") == OK):
+	if (not helper_functions.change_scene ("res://Scenes/Levels/chaos_festival.tscn") == OK):
 	#if (not helper_functions.change_scene ("res://Scenes/Levels/finalBossLevel.tscn") == OK):
-	if (not helper_functions.change_scene ("res://Scenes/Levels/moronCity_2.tscn") == OK):
+	#if (not helper_functions.change_scene ("res://Scenes/Levels/moronCity_2.tscn") == OK):
 		printerr ("Unable to load the test level!")
 		get_tree ().quit ()
 	return

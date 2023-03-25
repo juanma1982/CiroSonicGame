@@ -121,6 +121,11 @@ crouch={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":1,"axis_value":1.0,"script":null)
  ]
 }
+spin_dash={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [physics]
 
@@ -128,6 +133,8 @@ common/physics_fps=120
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
+vram_compression/import_etc=true
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

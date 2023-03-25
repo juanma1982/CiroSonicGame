@@ -77,6 +77,7 @@ var is_tricking := false
 var is_unmoveable := false				# Used for cutscenes and other situations where the player shouldn't move.
 var stop_while_tricking := false		# Is/can the player stop while tricking.
 
+
 # Player's last position.
 var last_position := Vector2.ZERO
 
@@ -181,6 +182,7 @@ func _input (_event: InputEvent) -> void:
 	is_stomping = (Input.is_action_just_pressed ("stomp") and not is_stomping)
 	is_jumping = Input.is_action_pressed ("jump")
 	is_crouching = Input.is_action_pressed ("crouch")
+	is_spindashing = Input.is_action_pressed ("spin_dash")
 	if (OS.is_debug_build ()):	# DEBUGGING CONTROLS.
 		if (Input.is_action_pressed ("restart")):	# Restart the game?
 			reset_game ()

@@ -1,0 +1,98 @@
+[debug] [2023-03-25T04:17:42.383Z] ----------------------------------------------------------------------
+[debug] [2023-03-25T04:17:42.385Z] Command:       /mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/bin/node /home/juanma/.nvm/versions/node/v14.18.2/bin/firebase init
+[debug] [2023-03-25T04:17:42.385Z] CLI Version:   11.25.1
+[debug] [2023-03-25T04:17:42.386Z] Platform:      linux
+[debug] [2023-03-25T04:17:42.386Z] Node Version:  v14.18.2
+[debug] [2023-03-25T04:17:42.386Z] Time:          Sat Mar 25 2023 01:17:42 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-03-25T04:17:42.386Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-25T04:17:42.388Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-25T04:17:42.404Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-25T04:17:42.404Z] > authorizing via signed-in user (jmrodriguez1982@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /mnt/sto/COSAS/proyectos/godot/Sonics/CiroSonicGame/Builds/HTML5
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2023-03-25T04:17:42.818Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-25T04:17:42.819Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-03-25T04:18:14.809Z] > refreshing access token with scopes: []
+[debug] [2023-03-25T04:18:14.811Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-25T04:18:14.812Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-25T04:18:14.963Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-03-25T04:18:14.964Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-25T04:18:14.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2023-03-25T04:18:15.157Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 401
+[debug] [2023-03-25T04:18:15.158Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2023-03-25T04:18:15.159Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-03-25T04:18:15.160Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2023-03-25T04:18:20.758Z] ----------------------------------------------------------------------
+[debug] [2023-03-25T04:18:20.760Z] Command:       /mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/bin/node /home/juanma/.nvm/versions/node/v14.18.2/bin/firebase init
+[debug] [2023-03-25T04:18:20.760Z] CLI Version:   11.25.1
+[debug] [2023-03-25T04:18:20.760Z] Platform:      linux
+[debug] [2023-03-25T04:18:20.760Z] Node Version:  v14.18.2
+[debug] [2023-03-25T04:18:20.760Z] Time:          Sat Mar 25 2023 01:18:20 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-03-25T04:18:20.761Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-25T04:18:20.765Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-25T04:18:20.765Z] > authorizing via signed-in user (jmrodriguez1982@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /mnt/sto/COSAS/proyectos/godot/Sonics/CiroSonicGame/Builds/HTML5
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-03-25T04:19:08.619Z] > refreshing access token with scopes: []
+[debug] [2023-03-25T04:19:08.622Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-25T04:19:08.622Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-25T04:19:08.816Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-03-25T04:19:08.816Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-25T04:19:08.817Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-03-25T04:19:08.817Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"ciro-sonic","name":"ciro-sonic"}
+[debug] [2023-03-25T04:19:09.688Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 401
+[debug] [2023-03-25T04:19:09.688Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.CreateProject"}}]}}
+[debug] [2023-03-25T04:19:09.692Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/mnt/sto/home/juanma/.nvm/versions/node/v14.18.2/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
