@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/UI/HUD/game_hud.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/UI/HUD/hud_rings.tscn" type="PackedScene" id=2]
@@ -6,20 +6,14 @@
 [ext_resource path="res://Scenes/UI/HUD/hud_timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/UI/HUD/hud_lives.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/UI/HUD/hud_boost.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Fonts/ambitsek.ttf" type="DynamicFontData" id=7]
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 80
-font_data = ExtResource( 7 )
+[ext_resource path="res://Assets/Graphics/UI/GamePad/spinDash_press.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/rigth_press.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/left.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/rigth.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/left_press.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/jump.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/jump_press.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Graphics/UI/GamePad/spinDash.png" type="Texture" id=14]
 
 [node name="game_hud" type="CanvasLayer"]
 layer = 32
@@ -44,97 +38,36 @@ margin_right = 736.0
 margin_bottom = 566.0
 rect_scale = Vector2( 0.35, 0.35 )
 
-[node name="GamePad" type="Node2D" parent="."]
+[node name="touchGamePad" type="Node2D" parent="."]
 
-[node name="back" type="Button" parent="GamePad"]
-margin_top = 384.0
-margin_right = 131.0
-margin_bottom = 570.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "<"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="left" type="TouchScreenButton" parent="touchGamePad"]
+position = Vector2( -8, 384 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 11 )
+passby_press = true
 
-[node name="foward" type="Button" parent="GamePad"]
-margin_left = 192.0
-margin_top = 392.0
-margin_right = 323.0
-margin_bottom = 578.0
-rect_pivot_offset = Vector2( 131, 24 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = ">"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="rigth" type="TouchScreenButton" parent="touchGamePad"]
+position = Vector2( 200, 384 )
+normal = ExtResource( 10 )
+pressed = ExtResource( 8 )
 
-[node name="Jump" type="Button" parent="GamePad"]
-margin_left = 896.0
-margin_top = 392.0
-margin_right = 1027.0
-margin_bottom = 578.0
-rect_pivot_offset = Vector2( 131, 24 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = "^"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="jump" type="TouchScreenButton" parent="touchGamePad"]
+position = Vector2( 824, 376 )
+normal = ExtResource( 12 )
+pressed = ExtResource( 13 )
 
-[node name="Jump2" type="Button" parent="GamePad"]
-margin_left = 880.0
-margin_top = 24.0
-margin_right = 1020.0
-margin_bottom = 210.0
-rect_pivot_offset = Vector2( 131, 24 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-text = ">>"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="salir" type="Button" parent="GamePad"]
-margin_right = 320.0
-margin_bottom = 136.0
-rect_pivot_offset = Vector2( 131, 24 )
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.996078, 0.768627, 0, 1 )
-custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="button_down" from="GamePad/back" to="." method="_on_back_button_down"]
-[connection signal="button_up" from="GamePad/back" to="." method="_on_back_button_up"]
-[connection signal="pressed" from="GamePad/back" to="." method="_on_back_pressed"]
-[connection signal="toggled" from="GamePad/back" to="." method="_on_back_toggled"]
-[connection signal="button_down" from="GamePad/foward" to="." method="_on_foward_button_down"]
-[connection signal="button_up" from="GamePad/foward" to="." method="_on_foward_button_up"]
-[connection signal="pressed" from="GamePad/foward" to="." method="_on_foward_pressed"]
-[connection signal="button_down" from="GamePad/Jump" to="." method="_on_Jump_button_down"]
-[connection signal="button_up" from="GamePad/Jump" to="." method="_on_Jump_button_up"]
-[connection signal="pressed" from="GamePad/Jump" to="." method="_on_Jump_pressed"]
-[connection signal="button_down" from="GamePad/Jump2" to="." method="_on_Jump2_button_down"]
-[connection signal="button_up" from="GamePad/Jump2" to="." method="_on_Jump2_button_up"]
-[connection signal="button_down" from="GamePad/salir" to="." method="_on_salir_button_down"]
+[node name="spinDash" type="TouchScreenButton" parent="touchGamePad"]
+position = Vector2( 864, 112 )
+scale = Vector2( 0.8, 0.8 )
+normal = ExtResource( 14 )
+pressed = ExtResource( 7 )
+shape_centered = false
+shape_visible = false
+[connection signal="pressed" from="touchGamePad/left" to="." method="_on_left_pressed"]
+[connection signal="released" from="touchGamePad/left" to="." method="_on_left_released"]
+[connection signal="pressed" from="touchGamePad/rigth" to="." method="_on_rigth_pressed"]
+[connection signal="released" from="touchGamePad/rigth" to="." method="_on_rigth_released"]
+[connection signal="pressed" from="touchGamePad/jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="touchGamePad/jump" to="." method="_on_jump_released"]
+[connection signal="pressed" from="touchGamePad/spinDash" to="." method="_on_spinDash_pressed"]
+[connection signal="released" from="touchGamePad/spinDash" to="." method="_on_spinDash_released"]
