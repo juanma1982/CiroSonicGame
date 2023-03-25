@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/LevelItems/item_checkpoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Enemies/enemy_eggpawn.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/UI/zone_intro.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scripts/Levels/1.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/LevelItems/rings_spawner.tscn" type="PackedScene" id=5]
@@ -10,20 +11,22 @@
 [ext_resource path="res://Scenes/LevelItems/layers_switch.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/LevelItems/lamp.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/LevelItems/goal_post.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Enemies/bichos.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Enemies/abeja.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm.tres" type="TileSet" id=50]
 [ext_resource path="res://Scenes/LevelItems/air_furniture_spring.tscn" type="PackedScene" id=56]
 
-[sub_resource type="Curve2D" id=2]
+[sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 8.15796, -68.1965, -170.859, -2.66968, 170.859, 2.66968, 288.474, -65.5269, -49.3891, 30.7013, 49.3891, -30.7013, 504.718, -313.807, -177.534, 1.33484, 177.534, -1.33484, 675.579, -343.174, -90.7691, -37.3755, 90.7691, 37.3755, 818.406, -98.8978, 0, 0, 0, 0, 1152.12, -73.5359 )
 }
 
-[sub_resource type="Curve2D" id=3]
+[sub_resource type="Curve2D" id=2]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -2656.84, -339.234, -429.921, -22.6274, 429.921, 22.6274, -1751.75, -435.401, -169.706, -42.4264, 169.706, 42.4264, -954.131, -226.097, -441.235, -113.137, 441.235, 113.137, -51.8643, -47.9061, -197.99, 0, 197.99, 0, 380.885, 362.216, 0, 0, 0, 0, 912.629, 359.387 )
 }
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 416, 168 )
 
 [node name="Level" type="Node2D"]
@@ -107,11 +110,11 @@ position = Vector2( 8832, 1024 )
 
 [node name="Rail" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3008.69, 286.934 )
-curve = SubResource( 2 )
+curve = SubResource( 1 )
 
 [node name="Rail2" parent="Rail" instance=ExtResource( 6 )]
 position = Vector2( 3845.88, -7.41382 )
-curve = SubResource( 3 )
+curve = SubResource( 2 )
 
 [node name="death_plane" parent="." instance=ExtResource( 7 )]
 position = Vector2( 4024.73, 1986.99 )
@@ -175,4 +178,75 @@ offset = Vector2( 45, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1056, -680 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Bicho" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 120, -18.2475 )
+
+[node name="Abeja" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 478.314, -95.2285 )
+
+[node name="Abeja2" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 806.314, -223.229 )
+
+[node name="EggPawn" parent="Enemies/Bicho" instance=ExtResource( 2 )]
+position = Vector2( 1750.31, 576.771 )
+
+[node name="EggPawn2" parent="Enemies/Bicho" instance=ExtResource( 2 )]
+position = Vector2( 1894.31, 576.771 )
+
+[node name="Abeja3" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 2918.31, 560.771 )
+
+[node name="Bicho" parent="Enemies/Bicho" instance=ExtResource( 12 )]
+position = Vector2( 2422.31, 256.771 )
+
+[node name="Abeja4" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 2774.31, 248.771 )
+
+[node name="Abeja5" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 2654.31, 1080.77 )
+
+[node name="Bicho3" parent="Enemies/Bicho" instance=ExtResource( 12 )]
+position = Vector2( 5574.31, 704.771 )
+
+[node name="Bicho4" parent="Enemies/Bicho" instance=ExtResource( 12 )]
+position = Vector2( 6118.31, 696.771 )
+
+[node name="Bicho5" parent="Enemies/Bicho" instance=ExtResource( 12 )]
+position = Vector2( 6990.31, 1088.77 )
+
+[node name="EggPawn3" parent="Enemies/Bicho" instance=ExtResource( 2 )]
+position = Vector2( 4510.31, 1280.77 )
+
+[node name="Abeja6" parent="Enemies/Bicho" instance=ExtResource( 13 )]
+position = Vector2( 3942.31, -31.2285 )
+
+[node name="Bicho2" parent="Enemies/Bicho" instance=ExtResource( 12 )]
+position = Vector2( 2326.5, 1090.25 )
+
+[node name="Bicho" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4886.31, 1262.52 )
+
+[node name="Abeja" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5614.31, 1430.52 )
+
+[node name="Abeja2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 5974.31, 1438.52 )
+
+[node name="Abeja3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 6358.31, 1454.52 )
+
+[node name="Abeja4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 7534.31, 1446.52 )
+
+[node name="Abeja5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 7910.31, 1374.52 )
+
+[node name="Abeja6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 7518.31, 734.524 )
+
+[node name="Bicho2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 8742.31, 1070.52 )

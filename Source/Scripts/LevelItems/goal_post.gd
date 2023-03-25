@@ -16,6 +16,7 @@ func _ready () -> void:
 # Called when something passes by the goalpost. If it's the player, then it'll trigger the end-of-level sequence.
 # This handles the end-of-level animation, everything else should be handled by goalpost_raised.
 func hit_goalpost (body) -> void:
+	if not visible: return
 	if (body is game_space.player_class and not goaled):	# Player has passed the goalpost.
 		goaled = true
 		$"AnimationPlayer".play ("goal")

@@ -17,4 +17,5 @@ animations = [ {
 modulate = Color( 1, 1, 1, 0.78451 )
 light_mask = 0
 frames = SubResource( 1 )
+frame = 3
 playing = true

@@ -12,3 +12,6 @@ func _ready () -> void:
 		#helper_functions.add_path_to_node ("res://Scenes/Levels/1_particles.tscn", "/root/Level/Player")
 	$zone_intro.play_me ()
 	return
+
+func showPost() -> void:
+	$StageItems/goal_post.visible=true

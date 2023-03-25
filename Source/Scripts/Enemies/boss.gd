@@ -7,6 +7,9 @@ var enableHit = true
 var xSpeed = 0.4
 var movement_direction = -1
 
+func _ready():
+	pass
+
 func resetHits() -> void:
 	hits_left = 8
 
@@ -61,7 +64,7 @@ func _on_enemy_area_entered (area) -> void:
 		newNode.position = position
 		newNode.boostValue = 2
 		get_node ("/root/Level").add_child (newNode)
-
+		get_node ("/root/Level").showPost()
 		
 
 		# Set the velocity to match the player's speed, with a few constraints.

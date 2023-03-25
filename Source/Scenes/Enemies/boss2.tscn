@@ -107,7 +107,6 @@ points_value = 2000
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 18 )
-frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -121,14 +120,14 @@ shape = SubResource( 9 )
 visible = false
 position = Vector2( -30.3136, -21.524 )
 frames = SubResource( 16 )
-frame = 2
+frame = 5
 playing = true
 
 [node name="explosion2" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 38.6864, 1.476 )
 frames = SubResource( 16 )
-frame = 1
+frame = 4
 playing = true
 
 [node name="punta" type="CollisionPolygon2D" parent="."]
